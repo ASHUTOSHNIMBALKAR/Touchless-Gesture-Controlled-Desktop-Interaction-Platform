@@ -1,0 +1,1 @@
+﻿# double_click, mousedown, mouseup support added
