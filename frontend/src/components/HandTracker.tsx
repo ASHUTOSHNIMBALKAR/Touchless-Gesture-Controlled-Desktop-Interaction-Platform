@@ -1,16 +1,22 @@
 ﻿'use client';
 import { useEffect, useRef } from 'react';
+import { useGestureStore } from '../store/useGestureStore';
 
 export default function HandTracker() {
   const videoRef = useRef(null);
+  const wsRef = useRef(null);
+  const { setConnected, isTracking } = useGestureStore();
   useEffect(() => {
-    async function startCamera() {
-      if (videoRef.current) {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        videoRef.current.srcObject = stream;
-      }
-    }
-    startCamera();
+    const ws = new WebSocket('ws://localhost:8000/ws');
+    wsRef.current = ws;
+    ws.onopen = () => setConnected(true);
+    ws.onclose = () => setConnected(false);
+    return () => ws.close();
+  }, [setConnected]);
+  useEffect(() => {
+    navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+      if (videoRef.current) videoRef.current.srcObject = stream;
+    });
   }, []);
   return <video ref={videoRef} autoPlay playsInline muted style={{ display: 'none' }} />;
 }
