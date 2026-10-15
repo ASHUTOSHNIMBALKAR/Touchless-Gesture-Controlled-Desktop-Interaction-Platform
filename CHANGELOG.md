@@ -1,8 +1,10 @@
 ﻿# Changelog
 
-## [0.1.0] - 2025-12-30
-- Initial project setup
+## [1.0.0] - 2026-10-15
+- Full touchless gesture desktop control
+- MediaPipe hand tracking in browser
 - FastAPI WebSocket backend
-- Next.js frontend
-- MediaPipe hand tracking integration
-- PyAutoGUI desktop control
+- EMA cursor smoothing
+- Gesture debouncing
+- Health check endpoint
+- Complete documentation
