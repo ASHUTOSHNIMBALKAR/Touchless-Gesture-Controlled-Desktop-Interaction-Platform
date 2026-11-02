@@ -1,24 +1,20 @@
 {
-  "name": "frontend",
+  "name": "gesture-grid",
   "version": "0.1.0",
-  "private": true,
+  "description": "Touchless Sterile Computer Interface",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev:backend": "python backend/server.py",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
   },
+  "keywords": [
+    "gesture",
+    "interface",
+    "touchless"
+  ],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "next": "16.1.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.1",
-    "typescript": "^5"
+    "concurrently": "^8.2.0"
   }
 }
