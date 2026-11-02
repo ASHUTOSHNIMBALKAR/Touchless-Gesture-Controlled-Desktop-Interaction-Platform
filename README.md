@@ -19,7 +19,7 @@
 - [Coordinate Mapping](#-coordinate-mapping)
 - [Smoothing Algorithm](#-smoothing-algorithm)
 - [Gesture Debouncing](#-gesture-debouncing)
-- [Development Timeline](#-development-timeline)
+
 
 ---
 
@@ -432,39 +432,6 @@ if gesture ≠ last_gesture  OR  time_since_last > 400ms:
 ```
 
 This ensures each distinct gesture fires **at most once per 400ms**, making interaction feel natural and deliberate.
-
----
-
-## 📅 Development Timeline
-
-| Date | Milestone |
-|------|-----------|
-| `2025-11-04` | 🏗️ Initial project scaffolding — Next.js + FastAPI setup |
-| `2025-11-07` | 📦 Core Python dependencies locked in `requirements.txt` |
-| `2025-11-10` | 🔌 FastAPI WebSocket server skeleton created |
-| `2025-11-14` | 🖱️ PyAutoGUI screen interaction basics (cursor move) |
-| `2025-11-18` | 👆 Click and right-click WebSocket actions implemented |
-| `2025-11-22` | 🤏 Double-click and drag (mousedown/mouseup) support added |
-| `2025-11-26` | ⌨️ Scroll, type and hotkey WebSocket actions completed |
-| `2025-12-01` | ⚛️ Next.js frontend scaffolded with TypeScript config |
-| `2025-12-05` | 🧠 MediaPipe hand landmarker WASM assets integrated |
-| `2025-12-10` | 📷 HandTracker component with MediaPipe wired up |
-| `2025-12-15` | 🗄️ Zustand gesture store added for global state management |
-| `2025-12-20` | 🖼️ Overlay HUD component for connection & gesture feedback |
-| `2025-12-25` | 🔗 WebSocket client fully connected inside HandTracker |
-| `2025-12-30` | 🚀 First complete end-to-end working prototype |
-| `2026-01-06` | 🤌 Pinch and fist gesture recognition logic added |
-| `2026-01-12` | 📉 EMA coordinate smoothing filter implemented |
-| `2026-01-18` | 🔄 EMA smoothing integrated into server move handler |
-| `2026-01-25` | 📜 Root `package.json` with workspace scripts added |
-| `2026-02-03` | 🙈 `.gitignore` rules for Python and Node artifacts |
-| `2026-02-12` | 📖 README with full setup and usage instructions |
-| `2026-02-20` | 📝 `PROJECT_EXPLAINED.md` — detailed architecture doc |
-| `2026-03-05` | 🔁 HandTracker refactored to `requestAnimationFrame` loop |
-| `2026-03-18` | ⏱️ Gesture debounce added to prevent accidental repeat clicks |
-| `2026-04-02` | ❤️ Backend `/health` endpoint for connection diagnostics |
-| `2026-10-15` | ✅ v1.0.0 — Full platform complete and documented |
-| `2026-11-02` | 🧹 README cleanup — removed outdated limitations section |
 
 ---
 
