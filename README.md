@@ -137,12 +137,6 @@ Stop the services with `Ctrl+C` in their terminal. If the mouse is moving unexpe
 - **Mouse actions are unreliable:** Improve lighting, keep one hand clearly visible, and adjust camera distance. The pinch threshold is currently hard-coded in `frontend/src/components/HandTracker.tsx`.
 - **Python dependency installation fails:** Use a supported Python installation and consult the platform-specific installation notes for PyAutoGUI.
 
-## Current limitations
-
-- The frontend tracks one hand and uses fixed gesture thresholds; there is no calibration or smoothing layer.
-- Scroll speed is based on the index fingertip's distance from the vertical center of the image, rather than a tracked movement delta.
-- The UI displays current gesture and connection status, but does not currently provide an in-app start/stop control or backend authentication.
-- The backend accepts additional command types, but the current frontend only emits cursor movement, mouse press/release, right-click, and scroll actions.
 
 ## Commit history
 
